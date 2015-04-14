@@ -12,7 +12,7 @@ var jsSrc = [
 				'components/scripts/tagline.js'
 ];
 
-var sassSrc = [components/sass/style.scss']
+var sassSrc = ['components/sass/style.scss']
 
 gulp.task('coffee', function(){
 	gulp.src(coffeeSrc)
@@ -34,7 +34,9 @@ gulp.task('compass', function(){
 			sass: 'components/sass',
 			image: 'builds/development/images',
 			style: 'expanded'
-		}))
-			.on('error', gutil.log))
+		})
+		.on('error', gutil.log))
 		.pipe(gulp.dest('builds/development/css'))
 });
+
+gulp.task('default', ['coffee', 'js','compass']);
