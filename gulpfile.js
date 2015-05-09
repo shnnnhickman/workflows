@@ -11,8 +11,8 @@ var jsSrc = [
 				'components/scripts/template.js',
 				'components/scripts/tagline.js'
 ];
-
-var sassSrc = ['components/sass/style.scss']
+/*quick test*/
+var sassSrc = ['components/sass/style2.scss']
 
 gulp.task('coffee', function(){
 	gulp.src(coffeeSrc)
@@ -37,6 +37,10 @@ gulp.task('compass', function(){
 		})
 		.on('error', gutil.log))
 		.pipe(gulp.dest('builds/development/css'))
+});
+
+gulp.task('watch', function(){
+	gulp.watch(coffeeSrc, ['coffee'])
 });
 
 gulp.task('default', ['coffee', 'js','compass']);

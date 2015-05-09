@@ -1,7 +1,0 @@
-.DS_Store
-node_modules
-.tmp
-.sass-cache
-Ex_Files_WPW_GG
-package.sublime-project
-builds/**/images/*
